@@ -15,7 +15,7 @@ var maxLives = 3
 //анимация
 // генерация poison, bonus
 // размер персонажа
-// нужно ли добавлять больше bonus? как?
+// нужно ли добавлять больше bonus, poison?
 // skaction wait
 // jump
 
