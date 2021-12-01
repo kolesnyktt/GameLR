@@ -9,8 +9,6 @@ import UIKit
 
 class StartViewController: UIViewController {
     
-    @IBOutlet weak var startButton: UIButton!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -27,7 +25,8 @@ class StartViewController: UIViewController {
     
     @objc func imageButtonTapped(_ sender:UIButton!)
     {
-        performSegue(withIdentifier: "goGame", sender: nil)
+        let gameVC = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "gameVC") as? GameViewController
+        self.present(gameVC!, animated: true, completion: nil)
     }
     
 }

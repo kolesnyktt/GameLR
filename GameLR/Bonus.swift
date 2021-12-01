@@ -7,7 +7,8 @@ class Bonus: SKSpriteNode {
     init() {
         let bonusSize = CGSize(width: 70, height: 70)
         super.init(texture: nil, color: .red, size: bonusSize)
-        self.texture = SKTexture(imageNamed: arrayTexture.randomElement()!)
+        choosenTexture = arrayTexture.randomElement()!
+        self.texture = SKTexture(imageNamed: choosenTexture)
         self.physicsBody = SKPhysicsBody(rectangleOf: self.size)
         self.physicsBody?.affectedByGravity = true
         self.physicsBody?.allowsRotation = false
